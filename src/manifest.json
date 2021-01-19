@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "silicon-chrome-extension",
+    "version": "1.0.0",
+    "description": "Silicon Based Worker Chrome Extension",
+    "icons": {
+        "16":"static/img/icon.png",
+        "19":"static/img/icon.png",
+        "38":"static/img/icon.png",
+        "48": "static/img/icon.png",
+		"128": "static/img/icon.png"
+    },
+    "browser_action":
+    {
+        "default_icon": "static/img/icon.png",
+        "default_title": "silicon-chrome-extension",
+        "default_popup": "popup.html"
+    },
+    "options_page": "option.html",
+    "background":
+    {
+        "persistent": true,
+        "scripts": ["background.main.js"]
+    },
+    "chrome_url_overrides":{
+        "newtab":"newtab.html"
+    },
+    "content_scripts": [
+    {
+        "matches": ["https://*.baidu.com/*", "http://*.baidu.com/*"],
+        "js": ["content.main.js"],
+        "run_at": "document_end"
+    }],
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "<all_urls>",
+        "contextMenus",
+        "tabs",
+        "webRequest",
+        "notifications"
+    ]
+}
