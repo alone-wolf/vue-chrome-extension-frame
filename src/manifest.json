@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "silicon-chrome-extension",
+    "name": "vue-chrome-extension",
     "version": "1.0.0",
-    "description": "Silicon Based Worker Chrome Extension",
+    "description": "Vue Chrome Extension",
     "icons": {
         "16":"static/img/icon.png",
         "19":"static/img/icon.png",
